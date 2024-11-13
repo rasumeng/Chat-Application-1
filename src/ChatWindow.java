@@ -1,6 +1,5 @@
-import javax.swing.*;
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 
 public class ChatWindow extends JFrame {
@@ -26,6 +25,13 @@ public class ChatWindow extends JFrame {
         panel.add(new JScrollPane(chatArea), BorderLayout.CENTER);
         panel.add(inputField, BorderLayout.SOUTH);
         panel.add(sendButton, BorderLayout.EAST);
+        JPanel inputPanel = new JPanel();
+        inputPanel.setLayout(new BorderLayout());
+        inputPanel.add(inputField, BorderLayout.CENTER);
+        inputPanel.add(sendButton, BorderLayout.EAST);
+        panel.add(inputPanel, BorderLayout.SOUTH);
+        
+
 
         // Add to JFrame
         add(panel);
